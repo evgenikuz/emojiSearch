@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+header {
+    border: 1px solid #CED4DA;
+    background: linear-gradient(92deg, #087990 0.12%, #055160 100%);
+    height: 295px;
+}
+.title {
+    color: #CFF4FC;
+    font-size: 72px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 68px;
+    &__description {
+        font-size: 21px;
+        line-height: 36px; /* 171.429% */
+        color: #CFF4FC;
+        text-align: center;
+        margin-top: 4px;
+    }
+}
+.card {
+    &__section {
+        position: relative;
+        background: #EDEEF3;
+        padding: 80px 228px 49px 226px;
+    }
+    &__search {
+        max-width: 820px;
+        width: 100%;
+        height: 64px;
+        border-radius: 4px;
+        border: 1px solid #CED4DA;
+        background: #FFF;
+        position: absolute;
+        left: 50%;
+        top: -32px;
+        transform: translateX(-50%);
+        color:#ABB5BE;
+        font-size: 24px;
+        line-height: 21px; /* 87.5% */
+        padding-left: 32px;
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 19px;
+        row-gap: 22px;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #FFF;
+        height: 184px;
+        padding: 24px;
+    }
+    &__emoji {
+        font-size: 48px;
+        line-height: 48px; /* 100% */
+    }
+    &__name {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 28px; /* 164.706% */
+        text-decoration-line: underline;
+        margin-bottom: 12px; 
+        margin-top: 18px;
+    }
+    &__keywords {
+        color: #3F444A;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+.footer {
+    background: #EDEEF3;
+    padding-right: 226px;
+    padding-left: 228px;
+    padding-bottom: 17px;
+    &__line {
+        color: #CED4DA;
+    }
+    &__copyright {
+        margin-top: 13px;
+        color: #6C757D;
+        text-align: center;
+        font-size: 16px;
+        line-height: 21px; /* 131.25% */
+    }
+}
