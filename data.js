@@ -9131,7 +9131,3 @@ export let data = [
     keywords: 'regional indicator symbol letter a',
   },
 ];
-
-// let request = 'wow';
-// let searchResult = data.filter(el => el.title === request || el.keywords.includes(request))
-// console.log(searchResult)
