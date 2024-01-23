@@ -1,5 +1,9 @@
 import {data as emoji} from './data.js'
 
+let title = document.querySelector('title')
+let randomEmoji = emoji[Math.floor(Math.random()*emoji.length)]['symbol'] 
+title.textContent = `Emoji Finder ${randomEmoji}`
+
 renderCard(emoji)
 
 function renderCard(emoji) {
@@ -32,11 +36,11 @@ function filterKeywords(obj) {
     obj.keywordsFiltered = keywordsFiltered.join(' ')
 }
 
-let request = document.querySelector('.card__search')
+let request = document.querySelector('.card__search');
 
-let searchResult;
 function search(obj, str) {
-    searchResult = obj.filter(el => el.title === str || el.keywordsFiltered.includes(str))
+    str = str.trim().toLowerCase();
+    let searchResult = obj.filter(el => el.title === str || el.keywordsFiltered.includes(str))
     document.querySelector('.card__container').innerHTML='';
     return renderCard(searchResult)
 }
