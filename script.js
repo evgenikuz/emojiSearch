@@ -40,10 +40,9 @@ let request = document.querySelector('.card__search');
 
 function search(obj, str) {
     str = str.trim().toLowerCase();
-    console.log(str)
     let searchResult = obj.filter(el => el.title.toLowerCase() === str || el.keywordsFiltered.includes(str))
-    console.log(searchResult)
     document.querySelector('.card__container').innerHTML='';
+    request.value = ''
     return renderCard(searchResult)
 }
 
